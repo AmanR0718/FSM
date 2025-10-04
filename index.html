@@ -626,7 +626,523 @@ body, input, textarea, select, button {
             }
         }
     
-    </style>
+    
+
+/* ===== MODERN ENHANCEMENTS FOR EXISTING STRUCTURE ===== */
+
+/* Make the body more modern */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Enhanced container styling */
+.container-fluid {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Modern card styling */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #2d5016, #4a7c2a);
+    color: white;
+    border: none;
+    border-radius: 15px 15px 0 0;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* Modern button styling */
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2d5016, #4a7c2a);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #dc3545, #e74c3c);
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #ffc107, #ffb300);
+    color: #212529;
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #17a2b8, #00bcd4);
+}
+
+/* Enhanced form styling */
+.form-control {
+    border: 2px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.9);
+}
+
+.form-control:focus {
+    border-color: #4a7c2a;
+    box-shadow: 0 0 0 3px rgba(74, 124, 42, 0.1);
+    outline: none;
+    background: white;
+}
+
+/* Modern table styling */
+.table {
+    background: rgba(255,255,255,0.98);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background: linear-gradient(135deg, #2d5016, #4a7c2a);
+    color: white;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 18px 15px;
+    font-size: 0.85rem;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background: rgba(74, 124, 42, 0.05);
+    transform: scale(1.01);
+}
+
+.table td {
+    padding: 15px;
+    vertical-align: middle;
+    border: none;
+}
+
+/* Status toggle buttons */
+.status-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    min-width: 80px;
+    justify-content: center;
+}
+
+.status-toggle.active {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+}
+
+.status-toggle.inactive {
+    background: linear-gradient(135deg, #dc3545, #e74c3c);
+    color: white;
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+.status-toggle.pending {
+    background: linear-gradient(135deg, #ffc107, #ffb300);
+    color: #212529;
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3);
+}
+
+.status-toggle:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.status-toggle::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.8;
+}
+
+/* Floating registration button */
+.floating-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4a7c2a, #6b9936);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(74, 124, 42, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: floating-pulse 3s infinite;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(74, 124, 42, 0.5);
+}
+
+@keyframes floating-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Modern modal styling */
+.modal-content {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #2d5016, #4a7c2a);
+    color: white;
+    border: none;
+    padding: 25px;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+    opacity: 0.8;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-footer {
+    border: none;
+    padding: 20px 30px;
+    background: rgba(248, 249, 250, 0.5);
+}
+
+/* Notification system */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.notification {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-left: 4px solid #28a745;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.success { border-left-color: #28a745; }
+.notification.error { border-left-color: #dc3545; }
+.notification.warning { border-left-color: #ffc107; }
+.notification.info { border-left-color: #17a2b8; }
+
+.notification-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #666;
+    margin-left: auto;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stats cards enhancement */
+.stats-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.stats-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d5016;
+    margin-bottom: 10px;
+}
+
+.stats-label {
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+/* Enhanced page styling */
+.page {
+    background: transparent;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.page.active {
+    display: block;
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE DESIGN FIXES */
+@media (max-width: 1200px) {
+    .container-fluid {
+        padding: 15px;
+    }
+
+    .col-lg-3, .col-lg-4, .col-lg-6, .col-lg-8, .col-lg-9 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .card-header {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .table {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 10px;
+    }
+
+    .table-responsive {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .table thead th {
+        padding: 12px 8px;
+        font-size: 0.8rem;
+    }
+
+    .table td {
+        padding: 12px 8px;
+        font-size: 0.85rem;
+    }
+
+    .floating-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .modal-body {
+        padding: 20px 15px;
+    }
+
+    .modal-header {
+        padding: 20px 15px;
+    }
+
+    .stats-number {
+        font-size: 2rem;
+    }
+
+    .form-control {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-body {
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        margin: 2px;
+    }
+
+    .table {
+        font-size: 0.8rem;
+    }
+
+    .status-toggle {
+        min-width: 70px;
+        padding: 4px 8px;
+        font-size: 0.7rem;
+    }
+
+    .notification {
+        max-width: calc(100vw - 40px);
+        margin: 0 20px 10px 20px;
+    }
+
+    .modal-dialog {
+        margin: 10px;
+    }
+
+    .modal-content {
+        border-radius: 10px;
+    }
+
+    .form-row .col-md-6, 
+    .form-row .col-md-4 {
+        margin-bottom: 15px;
+    }
+}
+
+/* Fix any layout issues */
+.row {
+    margin: 0;
+}
+
+.col-md-3, .col-md-4, .col-md-6, .col-md-8, .col-md-9, .col-md-12 {
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+/* Ensure proper spacing */
+.mb-3, .mb-4 {
+    margin-bottom: 20px;
+}
+
+/* Fix dropdown menus */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border-radius: 8px;
+}
+
+/* Fix navigation issues */
+.navbar-nav .nav-link {
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Ensure buttons are properly spaced */
+.btn-group {
+    gap: 5px;
+}
+
+.btn-group .btn {
+    margin: 0 2px;
+}
+</style>
 </head>
 <body>
     <!-- Toast Notification -->
@@ -923,25 +1439,162 @@ body, input, textarea, select, button {
         let uploadedFiles = JSON.parse(localStorage.getItem('agri_files') || '[]');
 
         // Location Data
-        const locationData = {
+const locationData = {
             "Central Province": {
-                "Chibombo District": ["HRH Chief Chitanda", "HRH Chieftainess Mungule"],
-                "Mumbwa District": ["HRH Chief Chibuluma", "HRH Chief Kaindu"],
-                "Serenje District": ["HRH Senior Chief Muchinda", "HRH Chief Kabamba"]
+                "Chibombo District": ["HRH Chief Chitanda", "HRH Chieftainess Mungule", "HRH Chief Liteta"],
+                "Chisamba District": ["HRH Chief Chamuka"],
+                "Kabwe District": ["Various Lenje Chiefdoms"],
+                "Kapiri Mposhi District": ["HRH Senior Chief Chipepo", "HRH Chief Mukonchi", "HRH Chief Nkole"],
+                "Mkushi District": ["HRH Chief Chitina", "HRH Chief Shaibila", "HRH Chief Mulungwe"],
+                "Mumbwa District": ["HRH Chief Chibuluma", "HRH Chieftainess Kabulwebulwe", "HRH Chief Kaindu"],
+                "Ngabwe District": ["HRH Chief Ngabwe", "HRH Chief Mukubwe"],
+                "Luano District": ["HRH Senior Chief Mboroma", "HRH Chief Chembe", "HRH Chief Chikupili"],
+                "Serenje District": ["HRH Senior Chief Muchinda", "HRH Chief Kabamba", "HRH Chief Chisomo", "HRH Chief Mailo"]
+            },
+            "Copperbelt Province": {
+                "Ndola District": ["Various Lamba/Bemba chiefs"],
+                "Kitwe District": ["Various Bemba/Lamba chiefs"],
+                "Luanshya District": ["Various Bemba/Lamba chiefs"],
+                "Lufwanyama District": ["HRH Chief Funguluwe", "HRH Chief Lumpuma", "HRH Chief Mukutuma"],
+                "Mpongwe District": ["HRH Senior Chief Ndubeni", "HRH Chief Kalunkumya"]
             },
             "Eastern Province": {
-                "Chipata District": ["HRH Paramount Chief Mpezeni", "HRH Chief Chinyanku"],
-                "Katete District": ["HRH Paramount Chief Kalonga Gawa", "HRH Chief Kathumba"]
+                "Chipata District": ["HRH Paramount Chief Mpezeni", "HRH Chief Chinyanku", "HRH Chief Maguya", "HRH Chief Sairi"],
+                "Katete District": ["Paramount Chief Kaonga Gawa Undi", "HRH Chief Kathumba", "HRH Chief Kawaza"],
+                "Lundazi District": ["HRH Chief Kapichila", "HRH Senior Chief Mwasenthembwe", "HRH Chief Mphamba"],
+                "Mambwe District": ["HRH Senior Chief Nsefu", "HRH Chief Jumbe", "HRH Chief Kakumbi"],
+                "Petauke District": ["HRH Senior Chief Kalindawalo", "HRH Chief Nyampande", "HRH Chief Mumbi"],
+                "Nyimba District": ["Senior Chief Luembe", "Chieftainess Mwape"]
+            },
+            "Luapula Province": {
+                "Mansa District": ["Chief Chimense", "Chief Chisunka", "Chief Kalaba", "Chief Kalasa Lukangaba"],
+                "Samfya District": ["Senior Chief Kalasa Mukoso", "Chief Kasoma"],
+                "Kawambwa District": ["Senior Chief Mushota", "Chief Chama", "Chief Munkata"],
+                "Mwense District": ["Chief Katuta Kampemba", "Chief Lubunda", "Chieftainess Lukwesa"],
+                "Chifunabuli District": ["Senior Chief Mwewa"]
+            },
+            "Lusaka Province": {
+                "Lusaka District": ["Mixed Chiefs (urban areas)"],
+                "Chongwe District": ["Senior Chieftainess Nkomeshya Mukamambo II"],
+                "Kafue District": ["Chieftainess Chiyaba", "Various Lenje/Lamba chiefs"],
+                "Luangwa District": ["Senior Chief Mburuma"]
+            },
+            "Muchinga Province": {
+                "Chinsali District": ["Senior Chief Nkula", "Chief Mubanga", "Chief Nkweto"],
+                "Mpika District": ["Chief Chikwanda", "Chief Kabinga", "Chief Mukungule"],
+                "Mafinga District": ["Chief Muyombe"],
+                "Chama District": ["Senior Chief Kambombo", "Chief Chibale", "Chief Chifunda", "Chief Chikwa"]
             },
             "Northern Province": {
-                "Kasama District": ["HRH Senior Chief Mwamba", "HRH Chief Nkolemfumu"],
-                "Mbala District": ["HRH Senior Chief Nsokolo", "HRH Chief Fwambo"]
+                "Kasama District": ["Multiple Bemba chiefs (Kasama area)"],
+                "Mbala District": ["Senior Chief Nsokolo", "Chief Fwambo"],
+                "Mporokoso District": ["Various chiefs (partial list)"],
+                "Luwingu District": ["Various chiefs (partial list)"]
+            },
+            "North-Western Province": {
+                "Solwezi District": ["Various Kaonde/Lunda chiefs"],
+                "Mwinilunga District": ["Chiefs with Luvale/Kaonde influence"],
+                "Kabompo District": ["Lunda-influenced chiefs"],
+                "Kasempa District": ["Kaonde chiefdoms"]
             },
             "Southern Province": {
-                "Choma District": ["HRH Chief Macha", "HRH Chief Mapanza"],
-                "Monze District": ["HRH Chief Chona", "HRH Chief Monze"]
+                "Choma District": ["Many Tonga chiefs (Choma area)"],
+                "Monze District": ["Many Tonga chiefs (Monze area)"],
+                "Mazabuka District": ["Many Tonga chiefs (Mazabuka area)"],
+                "Livingstone District": ["Tonga/Lozi mix chiefs"],
+                "Itezhi-Tezhi District": ["Chieftainess Muwezwa", "Chief Chilyabufu", "Chief Musungwa"]
+            },
+            "Western Province": {
+                "Mongu District": ["Lozi royal structures (Litunga & chiefdoms)"],
+                "Kaoma District": ["Lozi/Nkoya chiefs"],
+                "Sesheke District": ["Lozi/Subiya chiefs"],
+                "Sioma District": ["Lozi chiefs"]
             }
         };
+
+// Tribe Data (predominant ethnic groups)
+const tribeData = {
+    "Central Province": {
+        "major": [
+            "Lenje",
+            "Lala",
+            "Swaka",
+            "Sala"
+        ]
+    },
+    "Copperbelt Province": {
+        "major": [
+            "Bemba",
+            "Lamba",
+            "Bisa"
+        ]
+    },
+    "Eastern Province": {
+        "major": [
+            "Chewa",
+            "Nsenga",
+            "Ngoni",
+            "Tumbuka",
+            "Kunda"
+        ]
+    },
+    "Luapula Province": {
+        "major": [
+            "Bemba",
+            "Lunda",
+            "Shila"
+        ]
+    },
+    "Lusaka Province": {
+        "major": [
+            "Lenje",
+            "Soli",
+            "Nsenga",
+            "Tonga",
+            "Bemba",
+            "Chewa"
+        ]
+    },
+    "Muchinga Province": {
+        "major": [
+            "Bemba",
+            "Tumbuka",
+            "Namwanga",
+            "Mambwe"
+        ]
+    },
+    "Northern Province": {
+        "major": [
+            "Bemba",
+            "Mambwe",
+            "Lungu"
+        ]
+    },
+    "North-Western Province": {
+        "major": [
+            "Kaonde",
+            "Lunda",
+            "Luvale"
+        ]
+    },
+    "Southern Province": {
+        "major": [
+            "Tonga",
+            "Ila",
+            "Lenje"
+        ]
+    },
+    "Western Province": {
+        "major": [
+            "Lozi",
+            "Mbunda",
+            "Nkoya",
+            "Subiya"
+        ]
+    }
+};
+
+
 
         // Initialize demo data
         function initializeData() {
@@ -2599,6 +3252,502 @@ body, input, textarea, select, button {
         // Start the application
         initApp();
     
+
+
+// ===== ENHANCED FUNCTIONALITY FOR EXISTING SYSTEM =====
+
+// Initialize enhancements when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    initializeEnhancements();
+    addFloatingRegistrationButton();
+    setupResponsiveNavigation();
+    enhanceExistingFarmers();
+});
+
+function initializeEnhancements() {
+    console.log('🚀 Initializing modern enhancements...');
+
+    // Enhance existing cards
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+
+    // Enhance existing buttons
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+        });
+        btn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+
+    console.log('✅ Modern enhancements initialized');
+}
+
+function enhanceExistingFarmers() {
+    // Ensure all farmers have status
+    const farmers = JSON.parse(localStorage.getItem('farmers') || '[]');
+    let updated = false;
+
+    farmers.forEach(farmer => {
+        if (!farmer.status) {
+            farmer.status = 'active';
+            updated = true;
+        }
+    });
+
+    if (updated) {
+        localStorage.setItem('farmers', JSON.stringify(farmers));
+        console.log('✅ Enhanced farmer data with status');
+    }
+}
+
+// Enhanced farmer status toggle system
+function toggleFarmerStatus(farmerId) {
+    console.log('🔄 Toggling farmer status:', farmerId);
+
+    const farmers = JSON.parse(localStorage.getItem('farmers') || '[]');
+    const farmerIndex = farmers.findIndex(f => f.id === farmerId);
+
+    if (farmerIndex !== -1) {
+        const farmer = farmers[farmerIndex];
+        const currentStatus = farmer.status || 'active';
+
+        // Status cycle: active -> inactive -> pending -> active
+        const statusCycle = {
+            'active': 'inactive',
+            'inactive': 'pending',
+            'pending': 'active'
+        };
+
+        const newStatus = statusCycle[currentStatus];
+        farmer.status = newStatus;
+
+        // Save changes
+        localStorage.setItem('farmers', JSON.stringify(farmers));
+
+        // Show notification
+        showEnhancedNotification(
+            `${farmer.firstName} ${farmer.lastName} status changed to ${newStatus.toUpperCase()}`,
+            newStatus === 'active' ? 'success' : newStatus === 'pending' ? 'warning' : 'error'
+        );
+
+        // Refresh the current view
+        setTimeout(() => {
+            if (typeof showOperatorDashboard === 'function') {
+                showOperatorDashboard();
+            }
+        }, 500);
+
+        console.log(`✅ Status changed to: ${newStatus}`);
+        return newStatus;
+    } else {
+        console.log('❌ Farmer not found');
+        showEnhancedNotification('Farmer not found', 'error');
+    }
+}
+
+// Enhanced notification system
+function showEnhancedNotification(message, type = 'info') {
+    const container = getNotificationContainer();
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+
+    const icons = {
+        success: '✅',
+        error: '❌',
+        warning: '⚠️',
+        info: 'ℹ️'
+    };
+
+    notification.innerHTML = `
+        <span style="font-size: 1.1rem;">${icons[type]}</span>
+        <span style="flex: 1;">${message}</span>
+        <button class="notification-close" onclick="this.parentElement.remove()">×</button>
+    `;
+
+    container.appendChild(notification);
+
+    // Show notification
+    setTimeout(() => notification.classList.add('show'), 100);
+
+    // Auto remove after 4 seconds
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 300);
+    }, 4000);
+}
+
+function getNotificationContainer() {
+    let container = document.querySelector('.notification-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.className = 'notification-container';
+        document.body.appendChild(container);
+    }
+    return container;
+}
+
+// Add floating registration button
+function addFloatingRegistrationButton() {
+    if (document.querySelector('.floating-btn')) return; // Already exists
+
+    const floatingBtn = document.createElement('button');
+    floatingBtn.className = 'floating-btn';
+    floatingBtn.innerHTML = '👨‍🌾';
+    floatingBtn.title = 'Register as Farmer';
+    floatingBtn.onclick = showEnhancedFarmerRegistration;
+    document.body.appendChild(floatingBtn);
+
+    console.log('✅ Added floating registration button');
+}
+
+// Enhanced farmer registration modal
+function showEnhancedFarmerRegistration() {
+    const existingModal = document.getElementById('enhancedRegistrationModal');
+    if (existingModal) existingModal.remove();
+
+    const modalHTML = `
+        <div class="modal fade show" id="enhancedRegistrationModal" style="display: block; background: rgba(0,0,0,0.7);">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">🌾 Farmer Registration</h4>
+                        <button type="button" class="btn-close" onclick="closeEnhancedModal()"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="enhancedFarmerForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label"><strong>👤 First Name *</strong></label>
+                                    <input type="text" class="form-control" id="enhRegFirstName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label"><strong>👤 Last Name *</strong></label>
+                                    <input type="text" class="form-control" id="enhRegLastName" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label"><strong>📧 Email Address *</strong></label>
+                                    <input type="email" class="form-control" id="enhRegEmail" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label"><strong>📱 Phone Number *</strong></label>
+                                    <input type="tel" class="form-control" id="enhRegPhone" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label"><strong>🏛️ Province *</strong></label>
+                                    <select class="form-control" id="enhRegProvince" onchange="updateEnhDistrictsReg()" required>
+                                        <option value="">Select Province</option>
+                                        ${Object.keys(locationData).map(p => `<option value="${p}">${p}</option>`).join('')}
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label"><strong>🏘️ District *</strong></label>
+                                    <select class="form-control" id="enhRegDistrict" onchange="updateEnhChiefsReg()" required disabled>
+                                        <option value="">Select District</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label"><strong>👑 Chief *</strong></label>
+                                    <select class="form-control" id="enhRegChief" required disabled>
+                                        <option value="">Select Chief</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label"><strong>🌾 Land Area (hectares) *</strong></label>
+                                    <input type="number" class="form-control" id="enhRegLandArea" step="0.1" min="0.1" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label"><strong>🌱 Main Crops *</strong></label>
+                                    <input type="text" class="form-control" id="enhRegMainCrops" placeholder="e.g., Maize, Soybean, Cotton" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label"><strong>🎂 Date of Birth *</strong></label>
+                                    <input type="date" class="form-control" id="enhRegDateOfBirth" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label"><strong>🆔 NRC Number *</strong></label>
+                                    <input type="text" class="form-control" id="enhRegNRC" placeholder="123456/12/1" required>
+                                </div>
+                            </div>
+                            <div class="alert alert-info">
+                                <strong>📋 Important:</strong> Your registration will be submitted for approval by an operator. You will be notified once approved.
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="closeEnhancedModal()">
+                            Cancel
+                        </button>
+                        <button type="button" class="btn btn-success" onclick="submitEnhancedRegistration()">
+                            🚀 Register Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+}
+
+function closeEnhancedModal() {
+    const modal = document.getElementById('enhancedRegistrationModal');
+    if (modal) modal.remove();
+}
+
+function updateEnhDistrictsReg() {
+    const province = document.getElementById('enhRegProvince').value;
+    const districtSelect = document.getElementById('enhRegDistrict');
+    const chiefSelect = document.getElementById('enhRegChief');
+
+    districtSelect.innerHTML = '<option value="">Select District</option>';
+    chiefSelect.innerHTML = '<option value="">Select Chief</option>';
+
+    if (province && locationData[province]) {
+        Object.keys(locationData[province]).forEach(district => {
+            const option = document.createElement('option');
+            option.value = district;
+            option.textContent = district;
+            districtSelect.appendChild(option);
+        });
+        districtSelect.disabled = false;
+    } else {
+        districtSelect.disabled = true;
+        chiefSelect.disabled = true;
+    }
+}
+
+function updateEnhChiefsReg() {
+    const province = document.getElementById('enhRegProvince').value;
+    const district = document.getElementById('enhRegDistrict').value;
+    const chiefSelect = document.getElementById('enhRegChief');
+
+    chiefSelect.innerHTML = '<option value="">Select Chief</option>';
+
+    if (province && district && locationData[province] && locationData[province][district]) {
+        const chiefs = locationData[province][district];
+        chiefs.forEach(chief => {
+            const option = document.createElement('option');
+            option.value = chief;
+            option.textContent = chief;
+            chiefSelect.appendChild(option);
+        });
+        chiefSelect.disabled = false;
+    } else {
+        chiefSelect.disabled = true;
+    }
+}
+
+function submitEnhancedRegistration() {
+    const formData = {
+        firstName: document.getElementById('enhRegFirstName').value.trim(),
+        lastName: document.getElementById('enhRegLastName').value.trim(),
+        email: document.getElementById('enhRegEmail').value.trim(),
+        phone: document.getElementById('enhRegPhone').value.trim(),
+        province: document.getElementById('enhRegProvince').value,
+        district: document.getElementById('enhRegDistrict').value,
+        chief: document.getElementById('enhRegChief').value,
+        landArea: document.getElementById('enhRegLandArea').value,
+        mainCrops: document.getElementById('enhRegMainCrops').value.trim(),
+        dateOfBirth: document.getElementById('enhRegDateOfBirth').value,
+        nrc: document.getElementById('enhRegNRC').value.trim()
+    };
+
+    // Validate all fields
+    let isValid = true;
+    let firstInvalidField = null;
+
+    Object.keys(formData).forEach(key => {
+        const value = formData[key];
+        const field = document.getElementById('enhReg' + key.charAt(0).toUpperCase() + key.slice(1));
+
+        if (!value || (typeof value === 'string' && !value.trim())) {
+            isValid = false;
+            if (field) {
+                field.style.borderColor = '#dc3545';
+                if (!firstInvalidField) firstInvalidField = field;
+            }
+        } else if (field) {
+            field.style.borderColor = '';
+        }
+    });
+
+    if (!isValid) {
+        showEnhancedNotification('Please fill in all required fields', 'error');
+        if (firstInvalidField) firstInvalidField.focus();
+        return;
+    }
+
+    // Create new farmer
+    const newFarmer = {
+        id: 'farmer_' + Date.now(),
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        province: formData.province,
+        district: formData.district,
+        chief: formData.chief,
+        landArea: parseFloat(formData.landArea),
+        mainCrops: formData.mainCrops,
+        dateOfBirth: formData.dateOfBirth,
+        nrc: formData.nrc,
+        status: 'pending', // Self-registered farmers need approval
+        registrationDate: new Date().toISOString(),
+        registrationType: 'self-registered'
+    };
+
+    // Save to localStorage
+    const farmers = JSON.parse(localStorage.getItem('farmers') || '[]');
+    farmers.push(newFarmer);
+    localStorage.setItem('farmers', JSON.stringify(farmers));
+
+    closeEnhancedModal();
+    showEnhancedNotification(
+        `🎉 Registration successful! ${formData.firstName} ${formData.lastName} is now pending approval.`,
+        'success'
+    );
+
+    // Refresh current view if showing farmers
+    setTimeout(() => {
+        if (typeof showOperatorDashboard === 'function') {
+            showOperatorDashboard();
+        }
+    }, 1000);
+
+    console.log('✅ New farmer registered:', newFarmer);
+}
+
+// Setup responsive navigation
+function setupResponsiveNavigation() {
+    // Handle mobile menu toggles
+    const navTogglers = document.querySelectorAll('[data-bs-toggle="collapse"]');
+    navTogglers.forEach(toggler => {
+        toggler.addEventListener('click', function() {
+            const target = document.querySelector(this.getAttribute('data-bs-target'));
+            if (target) {
+                target.classList.toggle('show');
+            }
+        });
+    });
+
+    // Handle responsive table scrolling
+    const tables = document.querySelectorAll('.table');
+    tables.forEach(table => {
+        if (!table.closest('.table-responsive')) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'table-responsive';
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+        }
+    });
+
+    console.log('✅ Responsive navigation setup complete');
+}
+
+// Enhance the original showOperatorDashboard function
+const originalShowOperatorDashboard = window.showOperatorDashboard;
+if (originalShowOperatorDashboard) {
+    window.showOperatorDashboard = function() {
+        originalShowOperatorDashboard();
+
+        // Add status toggles to farmer table after it's rendered
+        setTimeout(() => {
+            addStatusTogglesToFarmerTable();
+        }, 300);
+    };
+}
+
+function addStatusTogglesToFarmerTable() {
+    const farmers = JSON.parse(localStorage.getItem('farmers') || '[]');
+    const tableRows = document.querySelectorAll('tbody tr');
+
+    tableRows.forEach((row, index) => {
+        if (farmers[index] && row.cells.length >= 6) {
+            const farmer = farmers[index];
+            const status = farmer.status || 'active';
+
+            // Find the actions cell (usually last cell)
+            const lastCell = row.cells[row.cells.length - 1];
+
+            // Check if status toggle already exists
+            if (!lastCell.querySelector('.status-toggle')) {
+                // Create status toggle button
+                const statusToggle = document.createElement('button');
+                statusToggle.className = `status-toggle ${status}`;
+                statusToggle.innerHTML = `${status.toUpperCase()}`;
+                statusToggle.onclick = () => toggleFarmerStatus(farmer.id);
+                statusToggle.style.marginRight = '5px';
+
+                // Add to the beginning of the cell
+                lastCell.insertBefore(statusToggle, lastCell.firstChild);
+            }
+        }
+    });
+
+    console.log('✅ Added status toggles to farmer table');
+}
+
+// Enhanced window resize handler for responsiveness
+let resizeTimeout;
+window.addEventListener('resize', function() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        handleResponsiveChanges();
+    }, 250);
+});
+
+function handleResponsiveChanges() {
+    const width = window.innerWidth;
+
+    // Adjust floating button on mobile
+    const floatingBtn = document.querySelector('.floating-btn');
+    if (floatingBtn) {
+        if (width <= 768) {
+            floatingBtn.style.width = '50px';
+            floatingBtn.style.height = '50px';
+            floatingBtn.style.fontSize = '1.2rem';
+        } else {
+            floatingBtn.style.width = '60px';
+            floatingBtn.style.height = '60px';
+            floatingBtn.style.fontSize = '1.5rem';
+        }
+    }
+
+    // Adjust modals on small screens
+    const modals = document.querySelectorAll('.modal-dialog');
+    modals.forEach(modal => {
+        if (width <= 576) {
+            modal.style.margin = '10px';
+        } else {
+            modal.style.margin = '';
+        }
+    });
+
+    console.log('🔄 Responsive adjustments applied for width:', width);
+}
+
+// Initialize on page load
+setTimeout(() => {
+    handleResponsiveChanges();
+}, 1000);
+
+console.log('🚀 Enhanced functionality loaded successfully!');
 </script>
 </body>
 </html>
